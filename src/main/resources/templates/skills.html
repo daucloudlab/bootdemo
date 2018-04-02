@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link href="/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="form-group">
+            <form action="#" th:action="@{/skills/}" th:object = "${skill}" method="POST">
+                <label for="label">Label</label>
+                <input type="text" id="label" name="label" th:field = "*{label}"
+                       class="form-control" placeholder="дағдыны енгізініз" />
+
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" th:field = "*{description}"
+                       class="form-control" placeholder="дағдыны сипаттаңыз" />
+
+
+                <br/>
+                <button type="submit" class="btn btn-primary">Сақтау</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
